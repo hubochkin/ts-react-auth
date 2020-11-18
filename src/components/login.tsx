@@ -11,7 +11,6 @@ import { Avatar } from "@material-ui/core";
 import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
 import Button from "@material-ui/core/Button";
 import Link from "@material-ui/core/Link";
-import CircularProgress from "@material-ui/core/CircularProgress";
 //redux stuff
 import { connect } from "react-redux";
 import { loginUser } from "../redux/actions/userActions";
@@ -42,6 +41,7 @@ function Login(props: any) {
     password: "",
   });
   const [errors, setErrors] = useState(false);
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [loading, setLoading] = useState(false);
   const [helperText, setHelperText] = useState("")
   useEffect(() => {

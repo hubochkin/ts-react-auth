@@ -1,6 +1,5 @@
 import React from "react";
 import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
-import Typography from "@material-ui/core/Typography";
 import { Card, CardContent } from "@material-ui/core";
 import EmployeeCardItem from "./employeeCardItem";
 
@@ -20,7 +19,7 @@ const useStyles = makeStyles((theme: Theme) =>
 export default function EmployeeCardWrapper(props: any) {
   const classes = useStyles();
   const employees = props.employees;
-console.log(employees)
+
 
 const EmployeeList = () => (
   <>

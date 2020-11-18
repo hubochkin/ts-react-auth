@@ -40,8 +40,9 @@ const useStyles = makeStyles((theme: Theme) =>
 
 export function MainPage(props: any) {
   const classes = useStyles();
-
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [errors, setErrors] = React.useState(false);
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [loading, setLoading] = React.useState(false);
   const [companies, setCompanies] = React.useState([]);
 

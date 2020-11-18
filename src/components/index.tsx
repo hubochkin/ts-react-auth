@@ -5,12 +5,14 @@ import { logoutUser } from "../redux/actions/userActions";
 import SimpleContainer from "./container";
 import MainPage from "./pages/main";
 import CompanyPage from "./pages/company";
-import { Switch, Route, Redirect } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 
 function Example(props: any) {
-  // Створюємо нову змінну стану, яку назвемо "count"
-  const [count, setCount] = useState(0);
+
+
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [errors, setErrors] = useState({});
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {

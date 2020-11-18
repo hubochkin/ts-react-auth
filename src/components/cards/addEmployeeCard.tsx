@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, {  useState } from "react";
 import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import {
@@ -7,9 +7,9 @@ import {
   CardContent,
   FormHelperText,
   InputAdornment,
-  InputLabel,
+
   MenuItem,
-  NativeSelect,
+
   Select,
 } from "@material-ui/core";
 
@@ -51,15 +51,14 @@ export function AddEmployee(props: any) {
     companyId: 0,
   });
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [loading, setLoading] = useState(false);
-  const [options, setOptions] = React.useState(null);
+
 
   const handleSubmit = (e: any) => {
     e.preventDefault();
     setLoading(true);
-    console.log("here");
     const companyData = state;
-    console.log(props);
     props.setEmployee(companyData);
   };
 
@@ -76,9 +75,9 @@ export function AddEmployee(props: any) {
       ...state,
       companyId: event.target.value as number,
     });
-    console.log(state);
+   
   };
-  console.log(props.companiesList);
+ 
   return (
     <Card className={classes.settingCard} variant="outlined">
       <CardContent>

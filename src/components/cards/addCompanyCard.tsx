@@ -42,7 +42,9 @@ export function AddCompanyCard(props: any) {
     revenue: null,
     phone: null,
   });
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [errors, setErrors] = useState(false);
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {

@@ -1,7 +1,7 @@
 //Finally in App.tsx
 import React, { useEffect } from "react";
 import "./App.css";
-import { BrowserRouter as Router, Switch, Route, BrowserRouter } from "react-router-dom";
+import {  Switch, BrowserRouter } from "react-router-dom";
 import Login from "./components/login";
 import Index from "./components/index";
 import GuestRoute from "./utils/GuestRoute";

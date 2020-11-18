@@ -10,7 +10,7 @@ const initialUser = {
 }
 const fakeToken = "SomeToken";
 export const loginUser = (userData: any, history: any) => (dispatch: any) => {
-    console.log("on user")
+   
     dispatch({ type: LOADING_UI })
     if (JSON.stringify(userData) === JSON.stringify(fakeUser)) {
         const token = `Bearer ${fakeToken}`;
@@ -18,10 +18,10 @@ export const loginUser = (userData: any, history: any) => (dispatch: any) => {
 
         dispatch(getUserData());
         dispatch({ type: CLEAR_ERRORS });
-        console.log("success");
+ 
         history.push("/"); // redirecting to index page after login success}
     } else {
-        console.log("login faild")
+   
         dispatch({ 
             type: SET_ERRORS,
             payload: { "error": "Email or password are incorrect"}

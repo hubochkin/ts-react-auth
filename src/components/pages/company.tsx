@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
-import CompanyCard from "../cards/companyInfoCard";
+
 import { connect } from "react-redux";
 import CompanyInfoCard from "../cards/companyInfoCard";
 import EmployeeCard from "../cards/employeeCardWrapper";
@@ -41,8 +41,9 @@ export function CompanyPage(props: any) {
   const classes = useStyles();
 
   let id = props.match.params.id;
-
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [errors, setErrors] = React.useState(false);
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [loading, setLoading] = React.useState(false);
   const [company, setCompany] = React.useState([]);
   const [employees, setEmployees] = React.useState([]);
@@ -51,26 +52,14 @@ export function CompanyPage(props: any) {
     if (!props.UI.errors) {
       setErrors(true);
     }
-    console.log(props)
     setCompany(props.company.companies[id]);
+    // eslint-disable-next-line eqeqeq
     const sortedEmployees = props.company.employees.filter((item: any )=> item.companyId == id);
-    console.log(sortedEmployees)
     setEmployees(sortedEmployees);
 
     setLoading(props.UI.loading);
-  }, [id, props.UI, props.company.companies]);
-  let companies = [1, 2, 3];
-  const CompaniesList = () => (
-    <>
-      {companies.map((item: any, index: number) => (
-        <CompanyCard
-          company={item}
-          className={classes.companyCard}
-          index={index}
-        />
-      ))}
-    </>
-  );
+  }, [id, props, props.UI, props.company.companies]);
+ 
 
   return (
     <div className={classes.root}>
